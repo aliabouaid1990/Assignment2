@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://demo.avactis.com/" />
+<title>Check Out</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Check Out</td></tr>
+</thead><tbody>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[5]/div/div/div/div/div</td>
+	<td>Your cart contains no products. Please add products to cart before checking out. </td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a.site-logo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Sport')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@value='Add To Cart'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=1 items</td>
+	<td>1 items</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=$523.00</td>
+	<td>$523.00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Continue Shopping</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Continue Shopping</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h2</td>
+	<td>Subscribe</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='Continue Checkout']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=step_1_errors</td>
+	<td> 1. Field 'First Name' in form 'Shipping Information' is required. 2. Field 'Last Name' in form 'Shipping Information' is required. 3. Field 'ZIP Code' in form 'Shipping Information' is required. 4. Field 'ZIP Code' in form 'Billing Information' is required. 5. Field 'City' in form 'Billing Information' is required. 6. Field 'Contact Phone' in form 'Billing Information' is required.</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//input[@value='Continue Checkout']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=billingInfo[Firstname]</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=billingInfo[Lastname]</td>
+	<td>y</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=billingInfo[Email]</td>
+	<td>y@gmail.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=billingInfo[Postcode]</td>
+	<td>0000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=billingInfo[City]</td>
+	<td>Oslo</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=billingInfo[Phone]</td>
+	<td>0000000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.shipping_same_as_billing.checkbox &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>name=shippingInfo[Firstname]</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=full_tax_exempt_status</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=full_tax_exempt_customer_input</td>
+	<td>0000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=subscriptionTopics[Topics][1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>name=subscriptionTopics[Topics][1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=subscriptionTopics[Topics][2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>name=subscriptionTopics[Topics][2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[5]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=h3.shipping_methods</td>
+	<td>Shipping Options</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.shipping_method_name &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@value='Continue Checkout'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//input[@value='Place Order']</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
